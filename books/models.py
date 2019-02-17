@@ -1,4 +1,9 @@
 # Create your models here.
+from __future__ import unicode_literals
+
+from django.db import models
+
+
 class Book(models.Model):
     HARDCOVER = 1
     PAPERBACK = 2

@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'widget_tweaks',
     'books'
 ]
 
@@ -116,5 +117,6 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, '/static'),
+    # os.path.join(BASE_DIR, 'django_simple_ajax_crud/static'),
+    os.path.join(BASE_DIR, 'static'),
 )

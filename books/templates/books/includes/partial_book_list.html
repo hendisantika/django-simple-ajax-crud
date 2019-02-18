@@ -7,9 +7,17 @@
         <td>{{ book.publication_date }}</td>
         <td>{{ book.pages }}</td>
         <td>{{ book.price }}</td>
+        <td>
+            <button type="button"
+                    class="btn btn-warning btn-sm js-update-book"
+                    data-url="{% url 'book_update' book.id %}">
+                <span class="glyphicon glyphicon-pencil"></span> Edit
+            </button>
+        </td>
     </tr>
 {% empty %}
     <tr>
-        <td colspan="7" class="text-center bg-warning">No book</td>
+        <td colspan="8" class="text-center bg-warning">No book</td>
     </tr>
 {% endfor %}
+

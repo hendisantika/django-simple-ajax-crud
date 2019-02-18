@@ -1,11 +1,15 @@
 # Create your views here.
 from django.http import JsonResponse
-from django.shortcuts import get_object_or_404
+from django.shortcuts import render, get_object_or_404
 from django.template.loader import render_to_string
 
 from .forms import BookForm
 from .models import Book
 
+
+def book_list(request):
+    books = Book.objects.all()
+    return render(request, 'books/book_list.html', {'books': books})
 
 def save_book_form(request, form, template_name):
     data = dict()
